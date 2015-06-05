@@ -121,7 +121,7 @@ public class BasePartsCategoryDaoImpl extends BaseDao implements
 		return ret;
 	}
 
-	@Override
+
 	public int update(BasePartsCategory basePartScategory, String code) {
 		// TODO Auto-generated method stub
 		// String sql =
@@ -142,7 +142,7 @@ public class BasePartsCategoryDaoImpl extends BaseDao implements
 						code });
 	}
 
-	@Override
+	
 	public int delete(String code) {
 		// TODO Auto-generated method stub
 		String sql = "delete BASEPARTSCATEGORY where CODE=?";
