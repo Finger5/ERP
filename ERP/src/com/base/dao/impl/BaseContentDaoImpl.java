@@ -15,7 +15,7 @@ import com.base.entity.BaseContent;
 import com.base.entity.PageBean;
 
 public class BaseContentDaoImpl extends BaseDao implements BaseContentDao {	
-	@Override
+
 	public PageBean findByCondition(BaseContent content,int pageNo,int pageSize) {
 		PageBean pb=new PageBean();
 		List<BaseContent> list=new ArrayList<BaseContent>();
@@ -62,13 +62,12 @@ public class BaseContentDaoImpl extends BaseDao implements BaseContentDao {
 		return pb;
 	}
 
-	@Override
 	public int delete(BaseContent content) {	
 		String sql="delete from basecontent where code=? and categorycode=? ";		
 		return super.executeUpdate(sql,new Object[]{content.getCode(),content.getCategoryCode()});
 	}
 
-	@Override
+
 	public int insert(BaseContent bc) {		
 		String sql="insert into basecontent (code, codename, categorycode, orderno, isshow, remarks, adddate, adduser, addusername, addip, compcode) " +
 				"values(?,?,?,?,?,?,sysdate,?,?,?,?) ";
@@ -76,14 +75,14 @@ public class BaseContentDaoImpl extends BaseDao implements BaseContentDao {
 				bc.getOrderNo(),bc.getIsShow(),bc.getRemarks(),
 				bc.getAddUser(),bc.getAddUserName(),bc.getAddIp(),bc.getCompCode()});
 	}
-	@Override
+
 	public int update(BaseContent content) {//字典名称不可选
 		String sql="update basecontent set orderno=?,isshow=?,remarks=? " +
 				"where code=? and categorycode=? ";
 		return super.executeUpdate(sql, new Object[]{content.getOrderNo(),content.getIsShow(),content.getRemarks()
 				,content.getCode(),content.getCategoryCode()});
 	}
-	@Override
+
 	public List<BaseContent> findCategory() {
 		String sql="select distinct categorycode from basecontent";
 		List<BaseContent> list=new ArrayList<BaseContent>();
@@ -101,7 +100,7 @@ public class BaseContentDaoImpl extends BaseDao implements BaseContentDao {
 		return list;
 	}
 
-	@Override
+	
 	public List<BaseContent> findAll() {		
 		List<BaseContent> list=new ArrayList<BaseContent>();
 		BaseContent bc=null;
