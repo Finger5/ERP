@@ -4,10 +4,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>进销存系统后台管理</title>
-<script src="/jereh/js/jquery-1.7.2.min.js"></script>
-<script src="/jereh/js/jquery.easyui.min.js"></script>
-<link type="text/css" href="/jereh/themes/icon.css" rel="stylesheet" />
-<link type="text/css" href="/jereh/themes/default/easyui.css" rel="stylesheet"/>
+<script src="/ERP/js/jquery-1.7.2.min.js"></script>
+<script src="/ERP/js/jquery.easyui.min.js"></script>
+<link type="text/css" href="/ERP/themes/icon.css" rel="stylesheet" />
+<link type="text/css" href="/ERP/themes/default/easyui.css" rel="stylesheet"/>
 <script>
 function addTab(t,u){	
 	if($("#tt").tabs("exists",t)){
@@ -73,8 +73,8 @@ li a:hover{
 	  	<span style="font-size:25px">进销存系统后台管理</span>
         <div id="tools" style="float:right; font-size:12px" >                    	
             <span>您好，&nbsp;管理员</span>   
-    	   	<span><a href="#"><img src="/jereh/img/add.gif"/>更改个人信息</a></span>   
-            <span><a href="exit.jsp" ><img src="/jereh/img/edit.gif"/>安全退出</a></span>    
+    	   	<span><a href="#"><img src="/ERP/img/add.gif"/>更改个人信息</a></span>   
+            <span><a href="exit.jsp" ><img src="/ERP/img/edit.gif"/>安全退出</a></span>    
             <span><input type="text"/><a id="btn" href="#" class="easyui-linkbutton" >搜索</a> </span>  
          </div>   
     </div>
@@ -132,11 +132,11 @@ li a:hover{
             </div>
            <div title="基础管理" data-options="iconCls:'icon-large-shapes',selected:true">
                 <ul>
-					<li><a href="#" onclick="addTab('往来单位管理','/jereh/base/BaseCustomerSupplier.jsp')">往来单位管理</a></li>
-               	 	<li><a href="#" onclick="addTab('字典内容管理','/jereh/base/base_content.jsp')">字典内容管理</a></li>
-               	 	<li><a href="#" onclick="addTab('配件类别管理','/jereh/base/BasePartsCategory.jsp')">配件类别管理</a></li>
-               	 	<li><a href="#" onclick="addTab('配件信息管理','/jereh/base/baseParts.jsp')">配件信息管理</a></li>
-               		<li><a href="#" onclick="addTab('公司信息管理','/jereh/base/BaseCompanySearchServlet')">公司信息管理</a></li>
+					<li><a href="#" onclick="addTab('往来单位管理','/ERP/base/BaseCustomerSupplier.jsp')">往来单位管理</a></li>
+               	 	<li><a href="#" onclick="addTab('字典内容管理','/ERP/base/base_content.jsp')">字典内容管理</a></li>
+               	 	<li><a href="#" onclick="addTab('配件类别管理','/ERP/base/BasePartsCategory.jsp')">配件类别管理</a></li>
+               	 	<li><a href="#" onclick="addTab('配件信息管理','/ERP/base/baseParts.jsp')">配件信息管理</a></li>
+               		<li><a href="#" onclick="addTab('公司信息管理','/ERP/base/BaseCompanySearchServlet')">公司信息管理</a></li>
                 </ul>
             </div>
             <div title="系统管理" data-options="iconCls:'icon-large-clipart'" >
